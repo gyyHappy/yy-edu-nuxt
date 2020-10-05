@@ -1,6 +1,4 @@
-# {{ name }}
-
-> {{ description }}
+# YY在线教育前台前端
 
 ## Build Setup
 
