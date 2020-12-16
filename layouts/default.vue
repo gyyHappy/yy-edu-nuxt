@@ -83,7 +83,7 @@
           </h4>
           <ul class="of flink-list">
             <li>
-              <a href="http://www.atguigu.com/" title="尚硅谷" target="_blank">尚硅谷</a>
+              <a href="" title="yy学院" target="_blank">yy学院</a>
             </li>
           </ul>
           <div class="clear"></div>

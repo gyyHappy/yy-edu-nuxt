@@ -2,21 +2,14 @@
   
   <div>
     <!-- 幻灯片 开始 -->
-  <div v-swiper:mySwiper="swiperOption">
-      <div class="swiper-wrapper">
-
-          <div v-for="banner in bannerList" :key="banner.id" class="swiper-slide" style="background: #040B1B;">
-              <a target="_blank" :href="banner.linkUrl">
-                  <img :src="banner.imageUrl" :alt="banner.title">
-              </a>
-          </div>
-      </div>
-      <div class="swiper-pagination swiper-pagination-white"></div>
-      <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
-      <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
-  </div>
+  <el-carousel :interval="3000" type="card" height="480px">
+    <el-carousel-item v-for="banner in bannerList" :key="banner.id">
+       <a target="_blank" :href="banner.linkUrl">
+          <img :src="banner.imageUrl" :alt="banner.title">
+       </a>
+    </el-carousel-item>
+  </el-carousel>
   <!-- 幻灯片 结束 -->
-    
      <div id="aCoursesList">
       <!-- 网校课程 开始 -->
       <div>
@@ -163,3 +156,10 @@ export default {
   }
 }
 </script>
+<style scoped>
+  img{
+    /*设置图片宽度和浏览器宽度一致*/
+    width: 100%;
+    height: inherit;
+  }
+</style>
